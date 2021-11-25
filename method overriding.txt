@@ -1,0 +1,21 @@
+package com.technoelevate.project;
+
+class A{
+	static void sum() {
+		System.out.println("sum1");
+	}
+}
+	
+public class Ent extends A{
+	static void sum() {
+		System.out.println("sum2");
+	}
+	public static void main(String[] args) {
+    System.out.println("pavan"); 
+A.sum();
+Ent.sum();
+
+
+	}
+
+}
