@@ -1,0 +1,50 @@
+package com.technoelevate.shoppingcart;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Scanner;
+
+	public class Arraylistcart {
+	static Scanner sc =new Scanner(System.in);
+
+	public static ArrayList myList= new ArrayList();
+	
+	
+	public static void main(String[] args) {
+		
+		
+		ShoppingCart spc=new ShoppingCart  ("atta",2,10);
+		ShoppingCart spc1=new ShoppingCart ("oil pack",1,50);
+		ShoppingCart spc2=new ShoppingCart ("dhal 1kg",5,40);
+		ShoppingCart spc3=new ShoppingCart ("rice bag",2,452);
+		ShoppingCart spc4=new ShoppingCart ("edle mix",2,20);
+		ShoppingCart spc5=new ShoppingCart ("bottle",2,50);
+		ShoppingCart spc6=new ShoppingCart ("maggie",2,80);
+		ShoppingCart spc7=new ShoppingCart ("pickel",2,60);
+		ShoppingCart spc8=new ShoppingCart ("tomatos",2,80);
+		myList.add(spc);
+		myList.add(spc1);
+		myList.add(spc2);
+		myList.add(spc3);
+		myList.add(spc4);
+		myList.add(spc5);
+		myList.add(spc6);
+		myList.add(spc7);
+		myList.add(spc8);
+		myList.remove(5);
+		 
+		System.out.println(" UR ITEMS ARE.. ");
+		
+		
+		getGroceryItems();
+	}
+	public static void getGroceryItems() {
+//		for(Object obj:myList) {
+	Iterator itr=myList.iterator();
+		while(itr.hasNext()) {
+			ShoppingCart t= (ShoppingCart )itr.next();
+			System.out.println(" ITEM "  + t.getName()+" QUANTITY."+ t.getQty()+" PRICE "+t.getPrice());
+		
+	}
+	}
+}
